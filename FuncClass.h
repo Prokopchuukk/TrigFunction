@@ -3,7 +3,13 @@
 
 class FuncClass {
 public:
-    double FuncA();
+    double FuncA(int n); // Обчислення для n елементів
 };
+
+/**
+ * FuncA: Обчислює суму перших n елементів нескінченного ряду.
+ * param n: Кількість членів для обчислення.
+ * return Результат обчислення.
+ */
 
 #endif
