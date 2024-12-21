@@ -1,0 +1,11 @@
+Source: func-class
+Section: math
+Priority: optional
+Maintainer: Prokopchuukk <prokopchu.u.k.k@gmail.com>
+Build-Depends: build-essential, debhelper-compat (= 12), autotools-dev
+
+Package: func-class
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Trigonometric calculator
+ A program that calculates trigonometric functions using Taylor series.

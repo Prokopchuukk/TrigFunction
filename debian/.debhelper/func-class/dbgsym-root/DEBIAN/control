@@ -1,0 +1,13 @@
+Package: func-class-dbgsym
+Package-Type: ddeb
+Source: func-class
+Version: 1.0-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Prokopchuukk <prokopchu.u.k.k@gmail.com>
+Installed-Size: 16
+Depends: func-class (= 1.0-1)
+Section: debug
+Priority: optional
+Description: debug symbols for func-class
+Build-Ids: 156c23b1318416b97e1af5cdb153b0704d81adff

@@ -17,6 +17,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y autoconf automake g++ debhelper devscripts
+          sudo apt-get install build-essential
 
       - name: Generate configure script
         run: |
@@ -25,16 +26,15 @@ jobs:
       - name: Configure
         run: ./configure
       
-
-       - name: Build Debian package
-        run: |
-          dpkg-buildpackage -us -uc
-
       - name: Build
         run: make
 
-      - name: Upload Debian
+      - name: Build package
+        run: |
+          dpkg-buildpackage -us -uc
+
+      - name: Upload package
         uses: actions/upload-artifact@v4
         with:
-          name: FuncClass-deb
-          path: /home/runner/work/Devops2/FuncClass_*.deb
+          name: func-class-deb
+          path: /home/runner/work/TrigFunction/func-class_*.deb
