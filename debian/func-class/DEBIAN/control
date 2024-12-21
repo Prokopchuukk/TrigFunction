@@ -1,0 +1,10 @@
+Package: func-class
+Version: 1.0-1
+Architecture: amd64
+Maintainer: Prokopchuukk <prokopchu.u.k.k@gmail.com>
+Installed-Size: 23
+Depends: libc6 (>= 2.34), libstdc++6 (>= 4.1.1)
+Section: math
+Priority: optional
+Description: Trigonometric calculator
+ A program that calculates trigonometric functions using Taylor series.

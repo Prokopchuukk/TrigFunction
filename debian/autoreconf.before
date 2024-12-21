@@ -1,0 +1,10 @@
+37aac6c4c93b03ab119f48566014b6f8  ./configure.ac
+343b81024167c41044bc7b9f88bb3078  ./FuncClass.h
+8a9276a6c8ab5ae9416fce683ae0b78b  ./.github/workflows/c-cpp.yml
+0e1181f90285ae87aad9a8fcc0dfda0b  ./FuncClass.cpp
+a6e90a4ae058a35202a75e2eaaf88d83  ./aclocal.m4
+e342407c2994360f1e0b7dfb0790df9f  ./Makefile.in
+162946d24837b50479813825deaeb205  ./configure
+fc5a9061233f5189879e9385e2f9f8fe  ./main.cpp
+3b183b0f8663518a2a57f0075812ec77  ./Makefile.am
+cbd545446700648f1305a49c5caffca7  ./.FuncClass.cpp.swp
