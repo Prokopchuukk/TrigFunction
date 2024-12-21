@@ -2,9 +2,9 @@ name: C/C++ Build program
 
 on:
   push:
-    branches: [branchAutomake]
+    branches: [branchAutoPackage]
   pull_request:
-    branches: [branchAutomake]
+    branches: [branchAutoPackage]
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y autoconf automake g++
+          sudo apt-get install -y autoconf automake g++ debhelper devscripts
 
       - name: Generate configure script
         run: |
@@ -26,14 +26,15 @@ jobs:
         run: ./configure
       
 
-      - name: Build program
+       - name: Build Debian package
+        run: |
+          dpkg-buildpackage -us -uc
+
+      - name: Build
         run: make
 
-      - name: Create dist
-        run: make dist
-
-      - name: Upload Artifact
+      - name: Upload Debian
         uses: actions/upload-artifact@v4
         with:
-            name: dist
-            path: '*.tar.gz'
+          name: FuncClass-deb
+          path: /home/runner/work/Devops2/FuncClass_*.deb
