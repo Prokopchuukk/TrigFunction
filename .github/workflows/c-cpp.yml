@@ -1,0 +1,22 @@
+name: C/C++ Build program
+
+on:
+  push:
+    branches: [branchMake]
+  pull_request:
+    branches: [branchMake]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++ make
+
+      - name: Build program
+        run: make
