@@ -2,9 +2,9 @@ name: C/C++ Build program
 
 on:
   push:
-    branches: [branchHTTPserver]
+    branches: [branchHTTPservMulti]
   pull_request:
-    branches: [branchHTTPserver]
+    branches: [branchHTTPservMulti]
 
 jobs:
   build:
